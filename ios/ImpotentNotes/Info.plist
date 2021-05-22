@@ -36,7 +36,7 @@
 		</dict>
 	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
+	<string/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -51,5 +51,19 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BeautifulPeoplePersonalUse-dE0g.ttf</string>
+		<string>Bullseye-ZVgVB.ttf</string>
+		<string>Family-nR2ag.otf</string>
+		<string>TypoRoundBoldDemo-KAZ7.ttf</string>
+		<string>TypoRoundBoldItalicDemo-26Dv.ttf</string>
+		<string>TypoRoundItalicDemo-vpXA.ttf</string>
+		<string>TypoRoundLightDemo-wAg3.ttf</string>
+		<string>TypoRoundLightItalicDemo-7AEP.ttf</string>
+		<string>TypoRoundRegularDemo-mJ8P.ttf</string>
+		<string>TypoRoundThinDemo-dJyK.ttf</string>
+		<string>TypoRoundThinItalicDemo-P5Xr.ttf</string>
+	</array>
 </dict>
 </plist>
