@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "851170789041",
+    "project_id": "impotent-notes",
+    "storage_bucket": "impotent-notes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851170789041:android:32d79fe791963d6a640490",
+        "android_client_info": {
+          "package_name": "com.impotentnotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851170789041-pnjdblmf0t8thnph110mdee9tj6s2l3m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe-mu1x1D1oo6wgdk3Dg79LBZf3eP8YDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851170789041-pnjdblmf0t8thnph110mdee9tj6s2l3m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
