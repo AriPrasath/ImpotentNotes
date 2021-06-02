@@ -1,10 +1,23 @@
 import React, { useState } from 'react';
 import { StyleSheet, Image, Text, View, TextInput, TouchableOpacity, Dimensions, ScrollView } from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
+import { loginUserAction } from '../../actions/AuthAction';
+import { colors } from '../../components/colors';
 
 const LogIn = (props) => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+
+  function onPressLogin() {
+    if(email === "")
+      alert('Email can\'t be blank');
+    else if(password === "")
+      alert('password can\'t be blank');
+    else
+      dispatch(loginUserAction({email: email, password: password}))
+  }
 
   return (
     <ScrollView style={styles.container}>
@@ -29,12 +42,12 @@ const LogIn = (props) => {
         <TouchableOpacity>
           <Text style={styles.forgot}>Forgot Password?</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.loginBtn}>
+        <TouchableOpacity style={styles.loginBtn} onPress={() => {onPressLogin()}}>
           <Text style={styles.loginText}>LOGIN</Text>
         </TouchableOpacity>
         <View style={styles.signUpContainer}>
           <Text style={styles.loginText}>Don't Have a Account?  </Text>
-          <TouchableOpacity onPress={() => { props.navigation.navigate('SignUp', {}) }}>
+          <TouchableOpacity onPress={() => {props.navigation.navigate('SignUp', {}) }}>
             <Text style={styles.signUpText}>Signup</Text>
           </TouchableOpacity>
         </View>
@@ -52,53 +65,54 @@ const windowHeight = Dimensions.get('window').height;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#eceef1',
+    backgroundColor: colors.milkwhite,
     padding: windowWidth * 0.06
   },
   logo: {
     marginTop: 10,
     fontSize: 50,
-    color: "#2d2d2d",
+    color: colors.black,
     marginBottom: 40,
     fontFamily: 'TypoRoundBoldItalicDemo-26Dv'
   },
   midContainer: {
+    marginTop: windowHeight * 0.06,
     justifyContent: 'center',
     alignItems: 'center',
   },
   inputView: {
     width: "80%",
-    backgroundColor: "#ffffff",
+    backgroundColor: colors.goldenglow,
     borderRadius: 25,
     height: 50,
     marginBottom: 20,
     justifyContent: "center",
-    padding: 20
+    padding: 20,
   },
   inputText: {
     height: 50,
-    color: "#eceef1"
+    color: colors.black
   },
   forgot: {
-    color: "#2d2d2d",
+    color: colors.black,
     fontSize: 11,
     marginTop: 10,
   },
   loginBtn: {
     width: "80%",
-    backgroundColor: "#ffffff",
+    backgroundColor: colors.goldenglow,
     borderRadius: 25,
     height: 50,
     alignItems: "center",
     justifyContent: "center",
     marginTop: 30,
-    marginBottom: 10
+    marginBottom: 10,
   },
   loginText: {
-    color: "#2d2d2d",
+    color: colors.black,
   },
   signUpText: {
-    color: "#2d2d2d",
+    color: colors.black,
     borderBottomWidth: 2,
   },
   signUpContainer: {
@@ -106,11 +120,12 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   imageContainer: {
-    height: 250, 
+    height: 250,
     width: 250,
     elevation: 5,
     borderColor: 'red'
   }
 });
 
-export default LogIn
+// Exports
+export default LogIn;

@@ -1,12 +1,15 @@
 import React from 'react';
 import {Text} from 'react-native';
-
-import HomeStackNavigator from './navigations/HomeNavigator';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+import MainApp from './screens/mainApp/MainApp';
 
 const App = () => {
 
   return (
-    <HomeStackNavigator />
+    <Provider store={store}>
+      <MainApp />
+    </Provider>
   );
 };
 
